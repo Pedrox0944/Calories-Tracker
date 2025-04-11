@@ -8,7 +8,7 @@ import (
 )
 
 func SalvarAlimento(alimento Alimento)error{
-	hoje := time.Now().Format("2006-04-25")
+	hoje := time.Now().Format("2006-01-02")
 	caminho := filepath.Join("data", hoje+".json")
 
 	var alimentos []Alimento
@@ -23,4 +23,22 @@ func SalvarAlimento(alimento Alimento)error{
 		return err
 	}
 	return os.WriteFile(caminho, novosdados, 0644)
+}
+
+func CarregarAlimentos(data string) ([]Alimento, error){
+	caminho := filepath.Join("data", data+".json")
+
+	var alimentos[] Alimento
+	conteudo, err := os.ReadFile(caminho)
+
+	if err != nil {
+		return nil, err
+	}
+
+	err = json.Unmarshal(conteudo, &alimentos)
+	if  err != nil {
+		return nil, err
+	}
+
+	return alimentos, nil
 }
