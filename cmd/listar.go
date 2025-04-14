@@ -26,12 +26,15 @@ var listarcmd = &cobra.Command{
 
 		fmt.Printf("Registro da data: %s\n", DataRegistro)
 
+		total_proteinas := 0
 		total := 0
 		for _, alimento := range alimentos{
-			fmt.Printf("- %s: %d calorias\n", alimento.Alimento, alimento.Calorias)
+			fmt.Printf("- %s: Calorias: %d - Proteínas: %d \n", alimento.Alimento, alimento.Calorias, alimento.Proteinas)
 			total += alimento.Calorias
+			total_proteinas += alimento.Proteinas
 		}
-		fmt.Printf("Total: %d Calorias", total)
+		fmt.Printf("Total: %d Calorias\n", total)
+		fmt.Printf("Total: %d Proteínas\n", total_proteinas)
 	},
 }
 

@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "Alimento": "Arroz",
+    "Calorias": 10,
+    "Proteinas": 10
+  },
+  {
+    "Alimento": "Feijao",
+    "Calorias": 100,
+    "Proteinas": 8
+  }
+]

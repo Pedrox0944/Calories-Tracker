@@ -11,12 +11,13 @@ import (
 
 var Nome string
 var Calorias int
+var Proteinas int
 
 var RefeicaoCmd = &cobra.Command{
 	Use:   "Refeicao",
 	Short: "A brief description of your command",
 	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example: calories_tracker refeicao --Nome "Alimento" --Calorias 10
+and usage of using your command. For example: calories_tracker refeicao --Nome "Alimento" --Calorias 10 --Proteinas 10
 
 Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
@@ -30,6 +31,7 @@ to quickly create a Cobra application.`,
 		alimento := data.Alimento{
 			Alimento: Nome,
 			Calorias: Calorias,
+			Proteinas: Proteinas,
 		}
 
 		err := data.SalvarAlimento(alimento)
@@ -38,7 +40,7 @@ to quickly create a Cobra application.`,
 			return 
 		}
 
-		fmt.Printf("Refeicão registrada com sucesso! Alimento: %s - Calorias: %d\n", alimento.Alimento, alimento.Calorias)
+		fmt.Printf("Refeicão registrada com sucesso! Alimento: %s - Calorias: %d - Proteínas: %d\n", alimento.Alimento, alimento.Calorias, alimento.Proteinas)
 	},
 }
 
@@ -47,6 +49,7 @@ func init() {
 
 	RefeicaoCmd.Flags().StringVar(&Nome, "Nome", "", "Nome do alimento")
 	RefeicaoCmd.Flags().IntVar(&Calorias, "Calorias", 0, "Quantidade de calorias")
+	RefeicaoCmd.Flags().IntVar(&Proteinas, "Proteinas", 0, "Quantidade de proteínas")
 
 	// Here you will define your flags and configuration settings.
 
