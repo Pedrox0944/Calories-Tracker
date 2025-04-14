@@ -6,9 +6,9 @@ Ele fará a instalação do Go na versão 1.23.7(Versão usada no desenvolviment
 
 -> Como usar 
 * Cadastrando um alimento
-**./nomedoexecutavel Refeicao --Nome "nome do alimento" --Calorias quantidade**
-Será criado um arquivo json com a nome sendo a data de criação e lá será gravado o alimento e suas respectivas calorias
-exemplo: *./Caloriestracker Refeicao --Nome "Arroz com batata" --Calorias 250*
+**./nomedoexecutavel Refeicao --Nome "nome do alimento" --Calorias quantidade --Proteinas quantidade**
+Será criado um arquivo json com a nome sendo a data de criação e lá será gravado o alimento, suas respectivas calorias e suas proteínas
+exemplo: *./Caloriestracker Refeicao --Nome "Arroz com batata" --Calorias 250 --Proteinas 10*
 
 * Listando suas refeições
 **./nomedoexecutavel Listar --Data YYYY-MM-DD**
