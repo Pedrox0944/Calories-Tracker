@@ -34,7 +34,7 @@ var DeletarCmd = &cobra.Command{
 func init(){
 	rootCmd.AddCommand(DeletarCmd)
 
-	DeletarCmd.Flags().StringVar(&dataDel,"data","","Data no formato YYYY-MM-DD")
-	DeletarCmd.Flags().StringVar(&alimentoDel, "alimento","","Nome do alimento")
+	DeletarCmd.Flags().StringVar(&dataDel,"Data","","Data no formato YYYY-MM-DD")
+	DeletarCmd.Flags().StringVar(&alimentoDel, "Alimento","","Nome do alimento")
 
 }

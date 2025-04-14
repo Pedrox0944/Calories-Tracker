@@ -37,5 +37,5 @@ var listarcmd = &cobra.Command{
 
 func init(){
 	rootCmd.AddCommand(listarcmd)
-	listarcmd.Flags().StringVar(&DataRegistro,"data","","Data no formato YYYY-MM-DD")
+	listarcmd.Flags().StringVar(&DataRegistro,"Data","","Data no formato YYYY-MM-DD")
 }
